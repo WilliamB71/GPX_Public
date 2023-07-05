@@ -2,8 +2,7 @@
 from django.shortcuts import render
 from .forms import GpxForm
 from .utils import get_coordinates, write_gpx_file
-from django.core.files.base import ContentFile
-from django.http import FileResponse, HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.encoding import smart_str
 import googlemaps
