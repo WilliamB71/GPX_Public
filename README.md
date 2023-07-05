@@ -1,6 +1,6 @@
 # | Django | [GPX Converter](http://gpxconverter.pythonanywhere.com/): Direction Generator For Use With SmartWatches
 
-in this project I developed a website that allows users to create GPX files, to be used with smartwatches and other GPS navigation devices easily and intuitively. By leveraging the Google Maps API up to date directions and the most time and energy efficent routes are produced.
+In this project I developed a website that allows users to create GPX files, to be used with smartwatches and other GPS navigation devices easily and intuitively. By leveraging the Google Maps API up to date directions and the most time and energy efficent routes are produced.
 
 
 # | Website Hompage |
