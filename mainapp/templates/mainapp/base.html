@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>{% block title %}GPX Converter{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="logo" src="{% static 'images/logo.png' %}" />
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="/create_gpx/">Generate GPX Directions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer>
+      <!-- Footer content goes here -->
+    </footer>
+  </body>
+</html>

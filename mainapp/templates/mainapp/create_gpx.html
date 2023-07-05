@@ -1,0 +1,40 @@
+{% extends 'mainapp/base.html' %} {% block content %}
+<div class="formcontainer">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="forminput">
+      <label for="start_location">Start Location</label>
+      <input
+        type="text"
+        id="start_location"
+        name="start_location"
+        placeholder="Start Location"
+        required
+      />
+
+      <label for="end_location">End Location</label>
+      <input
+        type="text"
+        id="end_location"
+        name="end_location"
+        placeholder="End Location"
+        required
+      />
+
+      <label for="transport_method">Transport Method</label>
+      <select id="transport_method" name="transport_method">
+        <option value="" disabled selected>Select Transport Method</option>
+        <option value="walking">Walking</option>
+        <option value="bicycling">Cycling</option>
+      </select>
+    </div>
+    <button type="submit">Generate GPX</button>
+    {% if error_message %}
+    <div class="error-message">{{ error_message }}</div>
+    {% endif %}
+  </form>
+</div>
+{% if download_link %}
+<h2>Download GPX File</h2>
+<a href="{{ download_link }}" download><button>Download GPX File</button></a>
+{% endif %} {% endblock %}
